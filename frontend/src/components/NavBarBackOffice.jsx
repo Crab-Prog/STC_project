@@ -40,9 +40,9 @@ function NavBarBackOffice() {
   }, []);
 
   return (
-    <div>
+    <>
       <div className="navbar-desktop-backoffice">
-        <div className="nav-part-one">
+        {/* <div className="nav-part-one">
           <div className="navbar-desk-logo">
             <img
               className="navbar-logo"
@@ -60,8 +60,28 @@ function NavBarBackOffice() {
               {names.prenom} {names.nom}
             </h1>
           </div>
+        </div> */}
+        <div className="nav-part-one">
+          <div className="navbar-desk-logo">
+            <img
+              className="navbar-logo"
+              src={logo}
+              alt="logo de la Social Team Consulting"
+              onClick={() => navigate("/")}
+            />
+            <h1>Social Team Consulting</h1>
+          </div>
+          <div className="navbar-desk-avatar-container">
+            <div className="navbar-desk-img-profile">
+              <div className="navbar-desk-border-profile" />
+            </div>
+          </div>
+          <div className="navbar-desk-name">
+            <h1>
+              {names.prenom} {names.nom}
+            </h1>
+          </div>
         </div>
-
         <div className="nav-part-two">
           <ul className="navbar-list">
             {infoUser.etat === "pré-inscrit" &&
@@ -71,6 +91,7 @@ function NavBarBackOffice() {
                   className="navbar-li_highlight"
                   onClick={() => Deconnexion(navigate, setInfoUser)}
                 >
+                  {/* <img src="https://www.svgrepo.com/show/347992/user.svg" alt="" className="navbar-icon"/> */}
                   <h2>Déconnexion</h2>
                 </li>
               </NavLink>
@@ -157,7 +178,7 @@ function NavBarBackOffice() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

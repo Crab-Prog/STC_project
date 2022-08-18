@@ -34,7 +34,7 @@
 .app-backoffice-container input[type="number"],
 .app-backoffice-container textarea[type="text"],
 #job_select,
-.modifProfil-card-container input[type="password"]{
+.modifProfil-card-container input[type="password"] {
   width: 100%;
   margin: 0.1rem 0 0.938rem;
   padding: 0.313rem;

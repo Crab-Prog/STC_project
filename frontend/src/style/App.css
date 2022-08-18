@@ -1,16 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root {
   --color-grey: #f0f2f5;
   --color-black: #050505;
-  --color-highlight: #f39634;
+  --color-highlight: rgb(38, 38, 38);
+
   --color-interaction: #19a8b3;
+  --color-button: #0f656b;
   --color-line-asso: #8dc73b;
-  --color-line-inter: #f79a33;
+  --color-line-inter: #222222;
   --color-line-admin: #7f4197;
-  --font-title: "Montserrat", sans-serif;
-  --font-paragraph: "Hind Guntur", sans-serif;
+  --font-title: "Merriweather", serif;
+  --font-paragraph: "Roboto", sans-serif;
   --font-size-title: 2rem;
   --font-size-paragraph: 1rem;
 }
@@ -50,18 +55,18 @@ h2 {
 
 .button-blue,
 .button-orange {
-  padding-right: 1rem;
-  padding-left: 1rem;
-  border-radius: 0.6rem;
+  padding: 0.4rem 1rem;
+  border-radius: 0.2rem;
   border: 0.125rem solid;
   text-align: center;
   font-weight: 500;
-  background-color: var(--color-grey);
+  background-color: var(--color-button);
+  box-shadow: 2px 7px 60px -2px rgba(126, 126, 126, 0.8);
 }
 
 .button-blue {
-  color: var(--color-interaction);
-  border-color: var(--color-interaction);
+  border-color: var(--color-button);
+  color: var(--color-grey);
 }
 
 .button-orange {

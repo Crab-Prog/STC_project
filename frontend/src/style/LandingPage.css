@@ -15,7 +15,7 @@ header h1 {
 }
 
 #services {
-  background-color: var(--color-highlight);
+  background-color: var(--color-interaction);
   margin: 1rem 0rem;
   padding: 0.5rem;
   border-radius: 0.63rem;
