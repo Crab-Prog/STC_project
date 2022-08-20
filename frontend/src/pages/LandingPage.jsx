@@ -8,7 +8,9 @@ function LandingPage() {
   return (
     <div className="main-landingpage">
       <header>
-        <h1> L'humain plus qu'une priorité </h1>
+        <div className="landing-background">
+          <h1> L'humain plus qu'une priorité </h1>
+        </div>
       </header>
       <section id="services">
         <h1>Nos services</h1>
@@ -43,14 +45,14 @@ function LandingPage() {
             alt="un accompagnement de qualité"
             className="img3 img"
           />
-          <div>
+          <p>
             Par son réseau de professionnel•les, Social Team Consulting
             s’attache à assurer une <span>intervention qualitative</span>. Après
             un diagnostic, une mise en relation <span>personnalisée</span> est
             effectuée <span>avec les collaborateurs</span> de Social Team
             Consulting. Notre volonté est de permettre à chacun de trouver sa
             voie.
-          </div>
+          </p>
         </div>
       </section>
       <section>
@@ -61,7 +63,7 @@ function LandingPage() {
             alt="l humain, plus qu une priorité"
             className="img1 img"
           />
-          <div>
+          <p>
             Le développement de Social Team Consulting est fondé sur le{" "}
             <span> respect de l'autre </span> et des singularités qui composent
             notre société. L'humain est <span>au cœur</span> des actions portées
@@ -71,20 +73,20 @@ function LandingPage() {
               <li> L'écoute </li>
               <li> Adaptation</li>
             </ul>
-          </div>
+          </p>
         </div>
       </section>
       <section>
         <h1>Qui sommes nous ?</h1>
         <div className="regular-section" id="even_section">
           <img src={img2} alt="Qui sommes nous" className="img2 img" />
-          <div>
+          <p>
             L’agence est fondée par des professionnel•les issu•es du{" "}
             <span>milieu médico-social</span> depuis près de <span>20 ans</span>{" "}
             . Grâce à la pluralité des profils et des structures dirigées,
             Social Team Consulting saura <span>vous accompagner</span> dans vos
             besoins en personnel les plus spécifiques .
-          </div>
+          </p>
         </div>
       </section>
       <section className="quote">

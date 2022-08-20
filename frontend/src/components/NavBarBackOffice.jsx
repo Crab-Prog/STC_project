@@ -6,7 +6,7 @@ import { Deconnexion, api } from "@services/services";
 
 import NavBarBackOfficeLinks from "@components/NavBarBackOfficeLinks";
 
-import genericavatar from "@assets/genericavatar.png";
+// import genericavatar from "@assets/genericavatar.png";
 
 import DataLinks from "@services/links.json";
 
@@ -14,6 +14,7 @@ import ExportContext from "../contexts/Context";
 
 import "@style/BackOffice.css";
 import "@style/NavBar.css";
+import Navtest from "./Navtest";
 
 function NavBarBackOffice() {
   const { infoUser, setInfoUser } = useContext(ExportContext.Context);
@@ -84,6 +85,7 @@ function NavBarBackOffice() {
         </div>
         <div className="nav-part-two">
           <ul className="navbar-list">
+            <Navtest />
             {infoUser.etat === "pré-inscrit" &&
             infoUser.role !== "administrateur" ? (
               <NavLink to="/back_office/mon_profil">
@@ -104,6 +106,11 @@ function NavBarBackOffice() {
                         className="navbar-li_highlight"
                         onClick={() => Deconnexion(navigate, setInfoUser)}
                       >
+                        <img
+                          src={`${el.icon}`}
+                          alt=""
+                          className="navbar-links-icons"
+                        />
                         <h2>{el.section}</h2>
                       </li>
                     </div>
@@ -114,6 +121,11 @@ function NavBarBackOffice() {
                   <NavLink to={el.link}>
                     <div role="button" tabIndex={0} className="navbar-button">
                       <li className="navbar-li_highlight">
+                        <img
+                          src={`${el.icon}`}
+                          alt=""
+                          className="navbar-links-icons"
+                        />
                         <h2>{el.section}</h2>
                       </li>
                     </div>
@@ -152,6 +164,7 @@ function NavBarBackOffice() {
 
             <div className="navbar-menu_wrapper">
               <hr className="navbar-hr" />
+              <Navtest />
               <NavBarBackOfficeLinks
                 handleisMenuVisible={handleisMenuVisible}
                 handleDeconnexion={() => Deconnexion(navigate, setInfoUser)}
@@ -165,7 +178,7 @@ function NavBarBackOffice() {
               <div className="profile-desc-picture">
                 <img
                   className="avatarprofilimg"
-                  src={genericavatar}
+                  src="https://images.pexels.com/photos/796602/pexels-photo-796602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="profile"
                 />
               </div>

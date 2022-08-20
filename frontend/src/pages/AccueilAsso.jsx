@@ -8,7 +8,9 @@ export default function AccueilAsso() {
   return (
     <div>
       <header>
-        <h1>Association</h1>
+        <div className="landing-background">
+          <h1>Association</h1>
+        </div>
       </header>
       <div className="presentationText">
         <p>

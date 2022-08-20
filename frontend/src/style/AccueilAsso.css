@@ -11,6 +11,7 @@ header {
 
 header h1 {
   color: white;
+  text-align: center;
   filter: drop-shadow(2px 2px 1px rgba(116, 113, 113, 0.562));
 }
 

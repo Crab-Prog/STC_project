@@ -1,0 +1,38 @@
+[
+  {
+    "section": "Valider une mission",
+    "link": "/back_office/validation_des_missions",
+    "association": false,
+    "intervenant": false,
+    "administrateur": true
+  },
+  {
+    "section": "Choisir un intervenant",
+    "link": "/back_office/choisir_un_intervenant",
+    "association": false,
+    "intervenant": false,
+    "administrateur": true
+  },
+  {
+    "section": "Changer l'intervenant",
+    "link": "/back_office/changer_un_intervenant",
+    "association": false,
+    "intervenant": false,
+    "administrateur": true
+  },
+  {
+    "section": "Terminer une mission",
+    "link": "/back_office/terminer_mission",
+    "association": false,
+    "intervenant": false,
+    "administrateur": true
+  },
+  {
+    "section": "Historique des missions",
+    "link": "/back_office/historique_des_missions",
+    "association": true,
+    "intervenant": true,
+    "administrateur": true,
+    "icon": "https://img.icons8.com/sf-ultralight/344/time-machine.png"
+  }
+]

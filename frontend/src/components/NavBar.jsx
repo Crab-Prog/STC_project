@@ -280,6 +280,7 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
           {isLogInVisible ? <hr className="navbar-hr" /> : ""}
           {backOfficeAccess()}
           <hr className="navbar-hr" />
+
           <NavBarLinks
             navigate={navigate}
             isLogInVisible={isLogInVisible}

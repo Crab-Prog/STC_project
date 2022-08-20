@@ -8,7 +8,9 @@ export default function AccueilIntervenant() {
   return (
     <div>
       <header>
-        <h1>Intervenant</h1>
+        <div className="landing-background">
+          <h1>Intervenant</h1>
+        </div>
       </header>
       <div className="presentationText">
         <p>

@@ -9,11 +9,14 @@ function Provider({ children }) {
     etat: sessionStorage.getItem(`etat`),
   });
 
+  const [isVisible, setIsVisible] = useState(false);
   return (
     <Context.Provider
       value={{
         infoUser,
         setInfoUser,
+        isVisible,
+        setIsVisible,
       }}
     >
       {children}

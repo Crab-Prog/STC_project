@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
 :root {
   --color-grey: #f0f2f5;
   --color-black: #050505;
@@ -28,11 +29,14 @@
   scroll-behavior: smooth;
   font-family: var(--font-paragraph);
 }
+
 a {
   text-decoration: none;
 }
+
 body {
   background-color: var(--color-grey);
+  letter-spacing: 0.03rem;
 }
 
 h1 {
@@ -47,8 +51,11 @@ h2 {
   font-weight: 700;
 }
 
+li {
+  list-style: none;
+}
+
 .app-main-container {
-  width: clamp(375px, 70%, 1200px);
   margin: 0 auto;
   padding: 3.5rem 1rem 0 1rem;
 }
@@ -87,4 +94,10 @@ h2 {
 
 .button-orange:hover {
   background-color: var(--color-highlight);
+}
+
+@media (min-width: 600px) {
+  .app-main-container {
+    width: clamp(375px, 70%, 1200px);
+  }
 }
