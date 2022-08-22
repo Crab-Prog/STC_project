@@ -14,6 +14,11 @@ function NavBarLinks({ handleisMenuVisible, showLink }) {
             showLink(false);
           }}
         >
+          <img
+            src="https://img.icons8.com/sf-ultralight/344/user-group-man-woman.png"
+            alt=""
+            className="navbar-links-icons"
+          />
           <h2>Vous êtes un intervenant</h2>
         </div>
       </NavLink>
@@ -28,6 +33,11 @@ function NavBarLinks({ handleisMenuVisible, showLink }) {
             showLink(false);
           }}
         >
+          <img
+            src="https://img.icons8.com/sf-ultralight/344/handshake.png"
+            alt=""
+            className="navbar-links-icons"
+          />
           <h2>Vous êtes une association</h2>
         </div>
       </NavLink>

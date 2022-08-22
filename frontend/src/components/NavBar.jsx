@@ -177,9 +177,22 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
   const backOfficeAccess = () => {
     if (isLogInVisible) {
       return (
-        <h2 onClick={() => navigate("/back_office")}>
-          Accès au Tableau de bord
-        </h2>
+        <div
+          role="button"
+          tabIndex={0}
+          className="navbar-button"
+          onClick={() => {
+            handleisMenuVisible(false);
+            showLink(false);
+          }}
+        >
+          <img
+            src="https://img.icons8.com/sf-ultralight/344/home-automation.png"
+            alt=""
+            className="navbar-icon"
+          />
+          <h2 onClick={() => navigate("/back_office")}>Tableau de bord</h2>
+        </div>
       );
     }
     return "";
@@ -208,7 +221,7 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
           <span className="navbar-bar" />
         </div>
         <div className="navbar-inline">
-          <ul className="navbar-list">
+          <ul className="navbar-list-landing">
             {isLogInVisible ? <li>{backOfficeAccess()}</li> : ""}
             <li
               className={`${isLinkVisible ? "navbar-li_highlight" : ""}`}
@@ -239,24 +252,34 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
                 showLink(false);
               }}
             >
-              <img
-                src="https://www.svgrepo.com/show/347992/user.svg"
-                alt=""
-                className="navbar-icon"
-              />
-              {infoUser.email !== undefined && infoUser.email !== null ? (
-                <h2 onClick={() => Deconnexion(navigate, setInfoUser)}>
-                  Déconnexion
-                </h2>
-              ) : (
-                <h2
-                  onClick={() => {
-                    showForm(!isFormVisible);
-                  }}
-                >
-                  Connexion
-                </h2>
-              )}
+              <div
+                role="button"
+                tabIndex={0}
+                className="navbar-button"
+                onClick={() => {
+                  handleisMenuVisible(false);
+                  showLink(false);
+                }}
+              >
+                <img
+                  src="https://www.svgrepo.com/show/347992/user.svg"
+                  alt=""
+                  className="navbar-icon"
+                />
+                {infoUser.email !== undefined && infoUser.email !== null ? (
+                  <h2 onClick={() => Deconnexion(navigate, setInfoUser)}>
+                    Déconnexion
+                  </h2>
+                ) : (
+                  <h2
+                    onClick={() => {
+                      showForm(!isFormVisible);
+                    }}
+                  >
+                    Connexion
+                  </h2>
+                )}
+              </div>
               <div
                 className={`${
                   isFormVisible
