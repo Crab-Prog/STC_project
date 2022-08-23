@@ -116,7 +116,13 @@ function NavBarForm(showForm) {
   };
 
   return (
-    <div className="navbar-connect-container">
+    <div
+      className={`${
+        isLog === false
+          ? "navbar-connect-container"
+          : "navbar-connect-container-2"
+      }`}
+    >
       {infoUser.email !== undefined && infoUser.email !== null ? (
         <button
           className="button-blue navbar-input"
@@ -133,32 +139,34 @@ function NavBarForm(showForm) {
           onSubmit={handleSubmit}
         >
           <legend className="navbar-legend">Déjà membre</legend>
-          <div className="form-example">
-            <label htmlFor="email">
-              <p>Email :</p>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                onClick={() => showForm(true)}
-                onChange={handleChange}
-              />
+          <div className="form-group">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              onClick={() => showForm(true)}
+              onChange={handleChange}
+              className="form-control "
+            />
+            <label htmlFor="email" className="form-control-placeholder ">
+              Email :{" "}
             </label>
           </div>
-          <div className="form-example">
-            <label htmlFor="mdp">
-              <p>Mot de passe :</p>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                required
-                onChange={handleChange}
-              />
+          <div className="form-group">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              onChange={handleChange}
+              className="form-control"
+            />
+            <label htmlFor="password" className="form-control-placeholder">
+              Mot de passe :
             </label>
           </div>
-          <div className="form-example">
+          <div className="form-example ">
             <button className="button-blue navbar-input" type="submit">
               Connexion
             </button>

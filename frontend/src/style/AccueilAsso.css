@@ -44,7 +44,9 @@ header h1 {
   text-align: center;
   margin: 1rem 0;
 }
-
+.home-inter-icons {
+  height: 10rem;
+}
 @media screen and (max-width: 600px) {
   .data {
     flex-direction: column;

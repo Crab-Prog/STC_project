@@ -1,7 +1,8 @@
 .pré-inscrit::before,
 .inscrit::before,
 .banni::before,
-.refusé::before {
+.refusé::before,
+.neutre::before {
   content: "";
   display: inline-block;
   width: 1rem;
@@ -23,7 +24,9 @@
 .refusé::before {
   background-color: red;
 }
-
+.neutre::before {
+  background-color: powderblue;
+}
 .usersList {
   display: flex;
   justify-content: center;
@@ -54,6 +57,15 @@ details[open] div {
 .listTitle {
   margin-bottom: 2rem;
   font-family: var(--font-title);
+}
+
+.user-list p {
+  padding: 0.5rem;
+  background-color: white;
+  border-bottom: 0.3rem solid #f0f2f5;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 p.pré-inscrit,

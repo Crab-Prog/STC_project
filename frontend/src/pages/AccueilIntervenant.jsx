@@ -21,9 +21,21 @@ export default function AccueilIntervenant() {
         </p>
       </div>
       <div className="data">
-        <div className="keyData" />
-        <div className="keyData" />
-        <div className="keyData" />
+        <img
+          src="https://img.icons8.com/bubbles/344/bullish.png"
+          alt=""
+          className="home-inter-icons"
+        />
+        <img
+          src="https://img.icons8.com/bubbles/344/help.png"
+          alt=""
+          className="home-inter-icons"
+        />
+        <img
+          src="https://img.icons8.com/bubbles/344/test-passed.png"
+          alt=""
+          className="home-inter-icons"
+        />
       </div>
       <div className="contactUsjoinUs">
         <div>

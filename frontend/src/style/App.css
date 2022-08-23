@@ -11,7 +11,7 @@
   --color-highlight: rgb(38, 38, 38);
 
   --color-interaction: #19a8b3;
-  --color-button: #0f656b;
+  --color-button: #19a8b3;
   --color-line-asso: #8dc73b;
   --color-line-inter: #222222;
   --color-line-admin: #7f4197;
@@ -77,8 +77,8 @@ li {
 }
 
 .button-orange {
-  color: var(--color-highlight);
-  border-color: var(--color-highlight);
+  color: var(--color-interaction);
+  border-color: var(--color-interaction);
 }
 
 .button-blue:hover,
@@ -93,7 +93,7 @@ li {
 }
 
 .button-orange:hover {
-  background-color: var(--color-highlight);
+  background-color: var(--color-interaction);
 }
 
 @media (min-width: 600px) {

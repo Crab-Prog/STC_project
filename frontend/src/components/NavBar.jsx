@@ -189,7 +189,7 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
           <img
             src="https://img.icons8.com/sf-ultralight/344/home-automation.png"
             alt=""
-            className="navbar-icon"
+            className="navbar-links-icons"
           />
           <h2 onClick={() => navigate("/back_office")}>Tableau de bord</h2>
         </div>
@@ -261,11 +261,6 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
                   showLink(false);
                 }}
               >
-                <img
-                  src="https://www.svgrepo.com/show/347992/user.svg"
-                  alt=""
-                  className="navbar-icon"
-                />
                 {infoUser.email !== undefined && infoUser.email !== null ? (
                   <h2 onClick={() => Deconnexion(navigate, setInfoUser)}>
                     Déconnexion
@@ -276,6 +271,11 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
                       showForm(!isFormVisible);
                     }}
                   >
+                    <img
+                      src="https://www.svgrepo.com/show/347992/user.svg"
+                      alt=""
+                      className="navbar-icon"
+                    />
                     Connexion
                   </h2>
                 )}

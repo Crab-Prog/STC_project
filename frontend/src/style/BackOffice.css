@@ -56,7 +56,7 @@
   }
 
   .navbar-desktop-backoffice {
-    background-color: var(--color-gray);
+    background-color: var(--color-grey);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -74,6 +74,9 @@
     text-underline-offset: 0.2rem;
     background-color: rgb(29, 29, 29);
     border: 0.1rem solid var(--color-highlight);
+  }
+  .navbar-desktop-backoffice li:hover {
+    background-color: #ffffff12;
   }
 
   .arch-backoffice {

@@ -26,7 +26,6 @@ function BackOfficeListeUsers() {
       setAdministrateurs(result.data);
     });
   }, []);
-
   return (
     <div className="usersList">
       <div>
@@ -42,9 +41,10 @@ function BackOfficeListeUsers() {
                   })
                 }
               >
-                <p
-                  className={`${intervenant.etat}`}
-                >{` - ${intervenant.nom} ${intervenant.prenom}`}</p>
+                <p className={`${intervenant.etat}`}>
+                  {`${intervenant.nom} ${intervenant.prenom}`} (
+                  {intervenant.etat} )
+                </p>
               </div>
             );
           })}
@@ -64,9 +64,9 @@ function BackOfficeListeUsers() {
                   })
                 }
               >
-                <p
-                  className={`${association.etat}`}
-                >{` - ${association.nom}`}</p>
+                <p className={`${association.etat}`}>
+                  {` ${association.nom}`} ({association.etat} )
+                </p>
               </div>
             );
           })}
@@ -86,7 +86,7 @@ function BackOfficeListeUsers() {
                   })
                 }
               >
-                <p className="admin">{`${administrateur.nom} ${administrateur.prenom}`}</p>
+                <p className="neutre admin">{`${administrateur.nom} ${administrateur.prenom}`}</p>
               </div>
             );
           })}
