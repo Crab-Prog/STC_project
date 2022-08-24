@@ -31,12 +31,5 @@
     "intervenant": true,
     "administrateur": true,
     "icon": "https://img.icons8.com/sf-ultralight/344/exit.png"
-  },
-  {
-    "section": "Valider une mission",
-    "link": "/back_office/validation_des_missions",
-    "association": false,
-    "intervenant": false,
-    "administrateur": true
   }
 ]
