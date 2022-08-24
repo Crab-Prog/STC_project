@@ -50,7 +50,7 @@ function BackOfficeAdminInterValidation() {
         <form method="PUT">
           <fieldset className="modif-fieldset">
             <legend>Choisissez un intervenant:</legend>
-            <div>
+            <div className="modif-inter-box">
               {intervenants.map((intervenant, i) => {
                 return (
                   <div i={i}>

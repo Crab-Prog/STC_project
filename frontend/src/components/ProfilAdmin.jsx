@@ -41,55 +41,60 @@ export default function ProfilAdmin() {
 
   return (
     <form
-      className="backoffice_profilinterv_form"
+      className="backoffice_profil"
       method="PUT"
       onSubmit={updateAdministrateur}
     >
-      <div className="backoffice-bloc">
-        <label htmlFor="name" className="backoffice-input-half">
-          <p>Nom</p>
-          <input
-            className="rules"
-            type="text"
-            name="nom"
-            placeholder={administrateur.nom}
-            onChange={(e) => handleChange(e)}
-          />
-        </label>
-        <label htmlFor="firstname" className="backoffice-input-half">
-          <p>Prénom</p>
-          <input
-            className="rules"
-            type="text"
-            name="prenom"
-            placeholder={administrateur.prenom}
-            onChange={(e) => handleChange(e)}
-          />
-        </label>
+      <div>
+        <div className="profil-form-box">
+          <label htmlFor="name" className="backoffice-input-half">
+            {administrateur.nom}
+            <input
+              className="rules"
+              type="text"
+              name="nom"
+              placeholder="Tapez un nouveau nom"
+              onChange={(e) => handleChange(e)}
+            />
+          </label>
+        </div>
+        <div className="profil-form-box">
+          <label htmlFor="firstname" className="backoffice-input-half">
+            {administrateur.prenom}
+            <input
+              className="rules"
+              type="text"
+              name="prenom"
+              placeholder="Tapez un nouveau prenom"
+              onChange={(e) => handleChange(e)}
+            />
+          </label>
+        </div>
+        <div className="profil-form-box">
+          <label htmlFor="mail" className="backoffice-input-half">
+            {administrateur.email}
+            <input
+              className="rules"
+              type="text"
+              name="email"
+              placeholder="Tapez un nouveau email"
+              onChange={(e) => handleChange(e)}
+            />
+          </label>
+        </div>
+        <div className="profil-form-box">
+          <label htmlFor="phone" className="backoffice-input-half">
+            {administrateur.telephone}
+            <input
+              className="rules"
+              type="text"
+              name="telephone"
+              placeholder="Tapez un nouveau téléphone"
+              onChange={(e) => handleChange(e)}
+            />
+          </label>
+        </div>
       </div>
-      <div className="backoffice-bloc">
-        <label htmlFor="mail" className="backoffice-input-half">
-          <p>Email</p>
-          <input
-            className="rules"
-            type="text"
-            name="email"
-            placeholder={administrateur.email}
-            onChange={(e) => handleChange(e)}
-          />
-        </label>
-        <label htmlFor="phone" className="backoffice-input-half">
-          <p>Téléphone</p>
-          <input
-            className="rules"
-            type="text"
-            name="telephone"
-            placeholder={administrateur.telephone}
-            onChange={(e) => handleChange(e)}
-          />
-        </label>
-      </div>
-
       <div className="backoffice_profilinterv_submit_button">
         <button className="button-blue" type="submit">
           Modifier le profil de l'administrateur

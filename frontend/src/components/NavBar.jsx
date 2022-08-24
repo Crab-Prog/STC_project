@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { Deconnexion } from "@services/services";
 import "@style/NavBar.css";
 
 import NavBarLinks from "@components/NavBarLinks";
@@ -9,7 +10,7 @@ import logo from "@assets/logo-STC.png";
 import ExportContext from "../contexts/Context";
 
 function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
-  const { infoUser } = useContext(ExportContext.Context);
+  const { infoUser, setInfoUser } = useContext(ExportContext.Context);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isLogInVisible, setIsLogInVisible] = useState(false);
   const navigate = useNavigate();
@@ -29,9 +30,22 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
   const backOfficeAccess = () => {
     if (isLogInVisible) {
       return (
-        <h2 onClick={() => navigate("/back_office")}>
-          Accès au Tableau de bord
-        </h2>
+        <div
+          role="button"
+          tabIndex={0}
+          className="navbar-button"
+          onClick={() => {
+            handleisMenuVisible(false);
+            showLink(false);
+          }}
+        >
+          <img
+            src="https://img.icons8.com/sf-ultralight/344/home-automation.png"
+            alt=""
+            className="navbar-icon"
+          />
+          <h2 onClick={() => navigate("/back_office")}>Tableau de bord</h2>
+        </div>
       );
     }
     return "";
@@ -60,7 +74,7 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
           <span className="navbar-bar" />
         </div>
         <div className="navbar-inline">
-          <ul className="navbar-list">
+          <ul className="navbar-list-landing">
             {isLogInVisible ? <li>{backOfficeAccess()}</li> : ""}
             <li
               className={`${isLinkVisible ? "navbar-li_highlight" : ""}`}
@@ -91,13 +105,34 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
                 showLink(false);
               }}
             >
-              <h2
+              <div
+                role="button"
+                tabIndex={0}
+                className="navbar-button"
                 onClick={() => {
-                  showForm(!isFormVisible);
+                  handleisMenuVisible(false);
+                  showLink(false);
                 }}
               >
-                Connexion
-              </h2>
+                {infoUser.email !== undefined && infoUser.email !== null ? (
+                  <h2 onClick={() => Deconnexion(navigate, setInfoUser)}>
+                    Déconnexion
+                  </h2>
+                ) : (
+                  <h2
+                    onClick={() => {
+                      showForm(!isFormVisible);
+                    }}
+                  >
+                    <img
+                      src="https://www.svgrepo.com/show/347992/user.svg"
+                      alt=""
+                      className="navbar-log-icon"
+                    />
+                    Connexion
+                  </h2>
+                )}
+              </div>
               <div
                 className={`${
                   isFormVisible
@@ -121,6 +156,7 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
           {isLogInVisible ? <hr className="navbar-hr" /> : ""}
           {backOfficeAccess()}
           <hr className="navbar-hr" />
+
           <NavBarLinks
             navigate={navigate}
             isLogInVisible={isLogInVisible}
@@ -131,7 +167,6 @@ function NavBar({ isLinkVisible, showLink, isFormVisible, showForm }) {
           {isMenuVisible ? <NavBarForm /> : ""}
         </div>
       </nav>
-      <hr className="navbar-bottom-hr" />
     </div>
   );
 }

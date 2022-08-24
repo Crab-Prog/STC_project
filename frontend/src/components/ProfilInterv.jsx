@@ -92,12 +92,13 @@ export default function ProfilInterv() {
 
   return (
     <div>
+      <ProfilStatusModification user={intervenant} />
       <form
-        className="backoffice_profilinterv_form"
+        className="backoffice_profil"
         method="PUT"
         onSubmit={updateIntervenant}
       >
-        <div className="backoffice-bloc">
+        <div className="profil-form-box">
           <label htmlFor="name" className="backoffice-input-half">
             <p className="bold">Nom</p>
             <input
@@ -108,6 +109,8 @@ export default function ProfilInterv() {
               onChange={(e) => handleChange(e)}
             />
           </label>
+        </div>
+        <div className="profil-form-box">
           <label htmlFor="firstname" className="backoffice-input-half">
             <p className="bold">Prénom</p>
             <input
@@ -119,7 +122,7 @@ export default function ProfilInterv() {
             />
           </label>
         </div>
-        <div className="backoffice-bloc">
+        <div className="profil-form-box">
           <label htmlFor="email" className="backoffice-input-half">
             <p className="bold">Email</p>
             <input
@@ -130,6 +133,8 @@ export default function ProfilInterv() {
               onChange={(e) => handleChange(e)}
             />
           </label>
+        </div>
+        <div className="profil-form-box">
           <label htmlFor="phone" className="backoffice-input-half">
             <p className="bold">Téléphone</p>
             <input
@@ -140,11 +145,12 @@ export default function ProfilInterv() {
               onChange={(e) => handleChange(e)}
             />
           </label>
-        </div>
-        <div className="backoffice_profilinterv_submit_button">
-          <button className="button-blue" type="submit">
-            Modifier le profil de l'intervenant
-          </button>
+
+          <div className="backoffice_profilinterv_submit_button">
+            <button className="button-blue" type="submit">
+              Modifier le profil de l'intervenant
+            </button>
+          </div>
         </div>
       </form>
       <div className="container-profil">
@@ -203,7 +209,6 @@ export default function ProfilInterv() {
           </div>
         </div>
       </div>
-      <ProfilStatusModification user={intervenant} />
     </div>
   );
 }

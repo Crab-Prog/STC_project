@@ -13,9 +13,16 @@ header h1 {
   color: white;
   filter: drop-shadow(2px 2px 1px rgba(116, 113, 113, 0.562));
 }
-
+.landing-background {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(1.9px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 #services {
-  background-color: var(--color-highlight);
+  background-color: var(--color-interaction);
   margin: 1rem 0rem;
   padding: 0.5rem;
   border-radius: 0.63rem;

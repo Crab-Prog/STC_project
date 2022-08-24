@@ -55,134 +55,154 @@ export default function FormAsso() {
           <div className="register_form">
             <h1>Demande d'inscription pour les associations</h1>
             <div className="box_form">
-              <div>
-                <label htmlFor="form_asso_name">
-                  <p>Nom de votre association</p>
-                  <input
-                    type="text"
-                    id="form_asso_name"
-                    required
-                    placeholder="ex: ASSOCIATION LES VALLIERES"
-                    onChange={handleChange}
-                    name="nom"
-                  />
+              <div className="form-group">
+                <input
+                  type="text"
+                  id="form_asso_name"
+                  required
+                  onChange={handleChange}
+                  name="nom"
+                  className="form-control"
+                />
+                <label
+                  htmlFor="form_asso_name"
+                  className="form-control-placeholder"
+                >
+                  Nom de votre association{" "}
                 </label>
               </div>
-              <div>
-                <label htmlFor="form_asso_email">
-                  <p>Email</p>
-                  <input
-                    type="email"
-                    id="form_asso_email"
-                    required
-                    placeholder="votreemail@gmail.com"
-                    onChange={handleChange}
-                    name="email"
-                  />
+              <div className="form-group">
+                <input
+                  type="email"
+                  id="form_asso_email"
+                  required
+                  onChange={handleChange}
+                  name="email"
+                  className="form-control"
+                />
+                <label
+                  htmlFor="form_asso_email"
+                  className="form-control-placeholder"
+                >
+                  Email
                 </label>
               </div>
             </div>
             <div className="box_form">
-              <div>
-                <label htmlFor="form_asso_mdp">
-                  <p>Choisir un mot de passe</p>
-                  <input
-                    type="password"
-                    name="password"
-                    id="form_asso_mdp"
-                    required
-                    placeholder="********"
-                    onChange={handleChange}
-                    autoComplete="off"
-                    value={association.password}
-                  />
+              <div className="form-group">
+                <input
+                  type="password"
+                  name="password"
+                  id="form_asso_mdp"
+                  required
+                  onChange={handleChange}
+                  autoComplete="off"
+                  value={association.password}
+                  className="form-control"
+                />
+                <label
+                  htmlFor="form_asso_mdp"
+                  className="form-control-placeholder"
+                >
+                  Choisir un mot de passe{" "}
                 </label>
               </div>
 
-              <div>
-                <label htmlFor="form_asso_mdp2">
-                  <p>Retapez votre mot de passe</p>
-
-                  <input
-                    type="password"
-                    name="passCheck"
-                    id="form_asso_mdp2"
-                    required
-                    placeholder="********"
-                    autoComplete="off"
-                    value={association.passCheck}
-                    onChange={handleChange}
-                  />
+              <div className="form-group">
+                <input
+                  type="password"
+                  name="passCheck"
+                  id="form_asso_mdp2"
+                  required
+                  autoComplete="off"
+                  value={association.passCheck}
+                  onChange={handleChange}
+                  className="form-control"
+                />
+                <label
+                  htmlFor="form_asso_mdp2"
+                  className="form-control-placeholder"
+                >
+                  Retapez votre mot de passe{" "}
                 </label>
               </div>
             </div>
             <div className="box_form">
-              <div>
-                <label htmlFor="form_asso_adresse">
-                  <p>Adresse</p>
-                  <input
-                    type="text"
-                    id="form_asso_adresse"
-                    required
-                    placeholder="3 rue du Limousin"
-                    onChange={handleChange}
-                    name="adresse"
-                  />
+              <div className="form-group">
+                <input
+                  type="text"
+                  id="form_asso_adresse"
+                  required
+                  onChange={handleChange}
+                  name="adresse"
+                  className="form-control"
+                />
+                <label
+                  htmlFor="form_asso_adresse"
+                  className="form-control-placeholder"
+                >
+                  Adresse{" "}
                 </label>
               </div>
-              <div>
-                <label htmlFor="form_asso_code_postale">
-                  <p>Code Postal</p>
-                  <input
-                    type="text"
-                    id="form_asso_code_postale"
-                    required
-                    placeholder="33000"
-                    onChange={handleChange}
-                    name="code_postal"
-                  />
+              <div className="form-group">
+                <input
+                  type="text"
+                  id="form_asso_code_postale"
+                  required
+                  onChange={handleChange}
+                  name="code_postal"
+                  className="form-control"
+                />
+                <label
+                  htmlFor="form_asso_code_postale"
+                  className="form-control-placeholder"
+                >
+                  Code Postal
                 </label>
               </div>
             </div>
             <div className="box_form">
-              <div>
-                <label htmlFor="form_asso_ville">
-                  <p>Ville</p>
-                  <input
-                    type="text"
-                    id="form_asso_ville"
-                    required
-                    placeholder="Bordeaux"
-                    onChange={handleChange}
-                    name="ville"
-                  />
+              <div className="form-group">
+                <input
+                  type="text"
+                  id="form_asso_ville"
+                  required
+                  onChange={handleChange}
+                  name="ville"
+                  className="form-control"
+                />
+                <label
+                  htmlFor="form_asso_ville"
+                  className="form-control-placeholder"
+                >
+                  Ville{" "}
                 </label>
               </div>
-              <div>
-                <label htmlFor="form_asso_tel">
-                  <p>Téléphone</p>
-                  <input
-                    type="text"
-                    id="form_asso_tel"
-                    required
-                    placeholder="0772980819"
-                    onChange={handleChange}
-                    name="telephone"
-                  />
+              <div className="form-group">
+                <input
+                  type="text"
+                  id="form_asso_tel"
+                  required
+                  onChange={handleChange}
+                  name="telephone"
+                  className="form-control"
+                />
+                <label
+                  htmlFor="form_asso_tel"
+                  className="form-control-placeholder"
+                >
+                  Téléphone{" "}
                 </label>
               </div>
             </div>
             <div className="form_textarea">
-              <label htmlFor="form_message">
-                <p>Votre message</p>
-
-                <textarea
-                  id="form_message"
-                  name="pre_inscription_message"
-                  required
-                  onChange={handleChange}
-                />
-              </label>
+              <textarea
+                id="form_message"
+                name="pre_inscription_message"
+                required
+                onChange={handleChange}
+              />
+              <label htmlFor="form_message">Votre message </label>
             </div>
             <div className="submit_button">
               <button type="submit" className="button-blue">

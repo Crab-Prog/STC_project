@@ -28,28 +28,28 @@ function NavBarBackOfficeLinks({
                   showLink(false);
                 }}
               >
+                <img src={`${el.icon}`} alt="" className="navbar-links-icons" />
                 <h2>{el.section}</h2>
               </div>
             </NavLink>
           );
         }
+
         return (
-          <>
-            <NavLink to={el.link}>
-              <div
-                role="button"
-                tabIndex={0}
-                className="navbar-button"
-                onClick={() => {
-                  handleisMenuVisible(false);
-                  showLink(false);
-                }}
-              >
-                <h2>{el.section}</h2>
-              </div>
-            </NavLink>
-            <hr className="navbar-hr" />
-          </>
+          <NavLink to={el.link}>
+            <div
+              role="button"
+              tabIndex={0}
+              className="navbar-button"
+              onClick={() => {
+                handleisMenuVisible(false);
+                showLink(false);
+              }}
+            >
+              <img src={`${el.icon}`} alt="" className="navbar-links-icons" />
+              <h2>{el.section}</h2>
+            </div>
+          </NavLink>
         );
       })}
     </>

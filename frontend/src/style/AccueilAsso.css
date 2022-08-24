@@ -11,6 +11,7 @@ header {
 
 header h1 {
   color: white;
+  text-align: center;
   filter: drop-shadow(2px 2px 1px rgba(116, 113, 113, 0.562));
 }
 
@@ -43,7 +44,9 @@ header h1 {
   text-align: center;
   margin: 1rem 0;
 }
-
+.home-inter-icons {
+  height: 10rem;
+}
 @media screen and (max-width: 600px) {
   .data {
     flex-direction: column;
