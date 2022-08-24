@@ -19,6 +19,15 @@
   letter-spacing: 0.063rem;
 }
 
+.form-control-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 7px 0 0 13px;
+  transition: all 200ms;
+  opacity: 0.5;
+}
+
 .register input[type="text"],
 .register input[type="password"],
 .register input[type="email"],
@@ -34,28 +43,57 @@
 .app-backoffice-container input[type="number"],
 .app-backoffice-container textarea[type="text"],
 #job_select,
-.modifProfil-card-container input[type="password"]{
+.modifProfil-card-container input[type="password"],
+.modifProfil-card-container input[type="text"] {
+  display: block;
   width: 100%;
-  margin: 0.1rem 0 0.938rem;
-  padding: 0.313rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #495057;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  margin: 0 auto;
   outline: none;
-  transition: 0.7s;
-  border: 0.125rem solid var(--color-black);
-  border-radius: 0.6rem;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-control:focus + .form-control-placeholder,
+.form-control:valid + .form-control-placeholder {
+  font-size: 75%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
 }
 
 .register input[type="text"]:focus,
 .register input[type="email"]:focus,
 .register input[type="password"]:focus,
-.register textarea:focus {
-  border-color: var(--color-highlight);
-}
-
+.register textarea:focus,
 .register_asso input[type="text"]:focus,
 .register_asso input[type="password"]:focus,
 .register_asso input[type="email"]:focus,
-.register_asso textarea:focus {
-  border-color: var(--color-line-asso);
+.register_asso textarea:focus,
+.app-backoffice-container input[type="text"]:focus,
+.app-backoffice-container input[type="date"]:focus,
+.app-backoffice-container input[type="time"]:focus,
+.app-backoffice-container input[type="email"]:focus,
+.app-backoffice-container input[type="number"]:focus,
+.app-backoffice-container textarea[type="text"]:focus,
+#job_select:focus,
+.modifProfil-card-container input[type="password"]:focus {
+  border-color: var(--color-interaction);
+}
+
+.register label:focus {
+  transform: translateY(-125%);
+  font-size: 0.75em;
 }
 
 .register textarea,
@@ -64,9 +102,9 @@
   height: 11.25rem;
 }
 
-.back {
+/* .back {
   padding-bottom: 5rem;
-}
+} */
 
 .register input[type="submit"],
 .register_asso input[type="submit"] {
@@ -112,6 +150,7 @@
 
 .form_upload h2 {
   text-decoration: underline;
+  padding-bottom: 1rem;
 }
 
 .show {
@@ -119,6 +158,9 @@
 }
 .hide {
   visibility: hidden;
+}
+.form-inter-box-files {
+  border-bottom: 0.3rem solid #f0f2f5;
 }
 
 @media screen and (min-width: 768px) {
@@ -147,7 +189,7 @@
   .register_form {
     background-color: var(--color-grey);
     display: flex;
-    border: 0.125rem solid var(--color-highlight);
+    border: 0.125rem solid var(--color-interaction);
     border-radius: 0.6rem;
   }
 

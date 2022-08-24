@@ -3,7 +3,7 @@
 }
 
 .modifProfil-card-container {
-  width: 80%;
+  max-width: 500px;
   padding: 1rem;
   margin: 1rem auto;
   overflow: hidden;
@@ -20,26 +20,33 @@
   display: flex;
   justify-content: space-between;
 }
-
-.modifProfil-container {
+.modifProfil-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 1rem;
+  gap: 1rem;
 }
-
+.modifProfil-container {
+  width: 100%;
+  padding-top: 1rem;
+}
+.modif-profil-show-password-check {
+  display: flex;
+  padding-bottom: 1rem;
+  gap: 0.5rem;
+}
 .modifProfil-input-container {
   display: flex;
   width: 60%;
   gap: 0.6rem;
 }
 
-.modifProfil-input input[type="text"],
+/* .modifProfil-input input[type="text"],
 .modifProfil-input input[type="password"] {
   padding: 0 0.2rem;
   width: 100%;
-}
+} */
 
 .modifProfil-icon-container {
   display: flex;
@@ -48,4 +55,10 @@
 
 .modifProfil-icon {
   line-height: 1px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modifProfil-card-container {
+    width: 80%;
+  }
 }

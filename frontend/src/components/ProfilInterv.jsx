@@ -57,7 +57,7 @@ export default function ProfilInterv() {
         setImageCarteVitale(
           `${import.meta.env.VITE_BACKEND_URL}/uploads/${data[2].data.path}`
         );
-        setIsloading(false);
+        setIsloading(!isLoading);
       }
     });
   }, [intervenant]);
@@ -100,126 +100,123 @@ export default function ProfilInterv() {
 
   return (
     <div>
-      {isLoading ? (
-        <h2>En cours de chargement</h2>
-      ) : (
-        <>
-          <form
-            className="backoffice_profilinterv_form"
-            method="PUT"
-            onSubmit={updateIntervenant}
-          >
-            <div className="backoffice-bloc">
-              <label htmlFor="name" className="backoffice-input-half">
-                <p className="bold">Nom</p>
-                <input
-                  className="rules"
-                  type="text"
-                  name="nom"
-                  placeholder={intervenant.nom}
-                  onChange={(e) => handleChange(e)}
-                />
-              </label>
-              <label htmlFor="firstname" className="backoffice-input-half">
-                <p className="bold">Prénom</p>
-                <input
-                  className="rules"
-                  type="text"
-                  name="prenom"
-                  placeholder={intervenant.prenom}
-                  onChange={(e) => handleChange(e)}
-                />
-              </label>
-            </div>
-            <div className="backoffice-bloc">
-              <label htmlFor="email" className="backoffice-input-half">
-                <p className="bold">Email</p>
-                <input
-                  className="rules"
-                  type="email"
-                  name="email"
-                  placeholder={intervenant.email}
-                  onChange={(e) => handleChange(e)}
-                />
-              </label>
-              <label htmlFor="phone" className="backoffice-input-half">
-                <p className="bold">Téléphone</p>
-                <input
-                  className="rules"
-                  type="text"
-                  name="telephone"
-                  placeholder={intervenant.telephone}
-                  onChange={(e) => handleChange(e)}
-                />
-              </label>
-            </div>
-            <div className="backoffice_profilinterv_submit_button">
-              <button className="button-blue" type="submit">
-                Modifier le profil de l'intervenant
-              </button>
-            </div>
-          </form>
-          <div className="container-profil">
-            <div className="profilInter-container">
-              <div className="profilInter-img-container">
-                <img
-                  className="imgDoc"
-                  src={imageCV}
-                  alt="cv de l'intervenant"
-                />
-              </div>
-              <div className="ajustButton">
-                <button
-                  type="button"
-                  className="button-blue"
-                  onClick={() => downloadImage(intervenant.image_cv)}
-                >
-                  Télécharger
-                </button>
-              </div>
-            </div>
-            <div className="profilInter-container">
-              <div className="profilInter-img-container">
-                <img
-                  className="imgDoc"
-                  src={ImageAuto}
-                  alt="status d'auto entrepreneur de l'intervenant"
-                />
-              </div>
-              <div className="ajustButton">
-                <button
-                  type="button"
-                  className="button-blue"
-                  onClick={() =>
-                    downloadImage(intervenant.image_statut_autoentrepreneur)
-                  }
-                >
-                  Télécharger
-                </button>
-              </div>
-            </div>
-            <div className="profilInter-container">
-              <div className="profilInter-img-container">
-                <img
-                  className="imgDoc"
-                  src={ImageCarteVitale}
-                  alt="carte vitale de l'intervenant"
-                />
-              </div>
-              <div className="ajustButton">
-                <button
-                  type="button"
-                  className="button-blue"
-                  onClick={() => downloadImage(intervenant.image_carte_vitale)}
-                >
-                  Télécharger
-                </button>
-              </div>
-            </div>
+      <ProfilStatusModification user={intervenant} />
+      <form
+        className="backoffice_profil"
+        method="PUT"
+        onSubmit={updateIntervenant}
+      >
+        <div className="profil-form-box">
+          <label htmlFor="name" className="backoffice-input-half">
+            <p className="bold">Nom</p>
+            <input
+              className="rules"
+              type="text"
+              name="nom"
+              placeholder={intervenant.nom}
+              onChange={(e) => handleChange(e)}
+            />
+          </label>
+        </div>
+        <div className="profil-form-box">
+          <label htmlFor="firstname" className="backoffice-input-half">
+            <p className="bold">Prénom</p>
+            <input
+              className="rules"
+              type="text"
+              name="prenom"
+              placeholder={intervenant.prenom}
+              onChange={(e) => handleChange(e)}
+            />
+          </label>
+        </div>
+        <div className="profil-form-box">
+          <label htmlFor="email" className="backoffice-input-half">
+            <p className="bold">Email</p>
+            <input
+              className="rules"
+              type="email"
+              name="email"
+              placeholder={intervenant.email}
+              onChange={(e) => handleChange(e)}
+            />
+          </label>
+        </div>
+        <div className="profil-form-box">
+          <label htmlFor="phone" className="backoffice-input-half">
+            <p className="bold">Téléphone</p>
+            <input
+              className="rules"
+              type="text"
+              name="telephone"
+              placeholder={intervenant.telephone}
+              onChange={(e) => handleChange(e)}
+            />
+          </label>
+
+          <div className="backoffice_profilinterv_submit_button">
+            <button className="button-blue" type="submit">
+              Modifier le profil de l'intervenant
+            </button>
           </div>
-          <ProfilStatusModification user={intervenant} />
-        </>
-      )}
+        </div>
+      </form>
+      <div className="container-profil">
+        <div className="profilInter-container">
+          <div className="profilInter-img-container">
+            <img className="imgDoc" src={imageCV} alt="cv de l'intervenant" />
+          </div>
+          <div className="ajustButton">
+            <button
+              type="button"
+              className="button-blue"
+              onClick={() => downloadImage(intervenant.image_cv)}
+            >
+              Télécharger
+            </button>
+          </div>
+        </div>
+
+        <div className="profilInter-container">
+          <div className="profilInter-img-container">
+            <img
+              className="imgDoc"
+              src={ImageAuto}
+              alt="status d'auto entrepreneur de l'intervenant"
+            />
+          </div>
+          <div className="ajustButton">
+            <button
+              type="button"
+              className="button-blue"
+              onClick={() =>
+                downloadImage(intervenant.image_statut_autoentrepreneur)
+              }
+            >
+              Télécharger
+            </button>
+          </div>
+        </div>
+
+        <div className="profilInter-container">
+          <div className="profilInter-img-container">
+            <img
+              className="imgDoc"
+              src={ImageCarteVitale}
+              alt="carte vitale de l'intervenant"
+            />
+          </div>
+          <div className="ajustButton">
+            <button
+              type="button"
+              className="button-blue"
+              onClick={() => downloadImage(intervenant.image_carte_vitale)}
+            >
+              Télécharger
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

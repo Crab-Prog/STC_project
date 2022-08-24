@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import { notifySuccess, notifyError, api } from "@services/services";
-import { BiShowAlt, BiHide } from "react-icons/bi";
 import ExportContext from "../contexts/Context";
 
 import "../style/ModifProfil.css";
+import "../style/Form.css";
 
 function ModifProfil() {
   const { infoUser } = useContext(ExportContext.Context);
@@ -37,20 +37,21 @@ function ModifProfil() {
       });
   }, [user]);
 
-  const [isPasswordVisilbe, setIsPasswordVisilbe] = useState({
-    oldPassword: false,
-    newPassword: false,
-    newPasswordConfirm: false,
-  });
+  // const [isPasswordVisilbe, setIsPasswordVisilbe] = useState({
+  //   oldPassword: false,
+  //   newPassword: false,
+  //   newPasswordConfirm: false,
+  // });
+  const [isPasswordVisilbe, setIsPasswordVisilbe] = useState(false);
   const [newPass, setNewPass] = useState();
 
-  const handleShowPassword = (e, inputChoice) => {
-    e.preventDefault();
-    setIsPasswordVisilbe({
-      ...isPasswordVisilbe,
-      [inputChoice]: !isPasswordVisilbe[inputChoice],
-    });
-  };
+  // const handleShowPassword = (e, inputChoice) => {
+  //   e.preventDefault();
+  //   setIsPasswordVisilbe({
+  //     ...isPasswordVisilbe,
+  //     [inputChoice]: !isPasswordVisilbe[inputChoice],
+  //   });
+  // };
 
   function handleChange(e) {
     setNewPass({
@@ -87,6 +88,9 @@ function ModifProfil() {
       });
   };
 
+  const handleShow = () => {
+    setIsPasswordVisilbe(!isPasswordVisilbe);
+  };
   return (
     <div className="modifProfil">
       <h1>
@@ -100,93 +104,57 @@ function ModifProfil() {
       <p>{user.telephone}</p>
       <div className="modifProfil-card-container">
         <h2 className="modifProfil-h2">Changer mon mot de passe</h2>
-        <form method="PUT" action="#">
+        <form method="PUT" action="#" className="modifProfil-form">
           <div className="modifProfil-container">
-            <div className="modifProfil-input-container">
-              <label className="modifProfil-input" htmlFor="passOld">
-                <input
-                  placeholder="mot de passe actuel"
-                  type={isPasswordVisilbe.oldPassword ? "text" : "password"}
-                  name="oldPassword"
-                  onChange={handleChange}
-                  id="passOld"
-                />
+            <div className="form-group">
+              <input
+                className="form-control"
+                type={isPasswordVisilbe ? "text" : "password"}
+                name="oldPassword"
+                onChange={handleChange}
+                id="passOld"
+                required
+              />
+              <label htmlFor="passOld" className="form-control-placeholder">
+                Mot de passe actuel
               </label>
-              <div
-                className="modifProfil-icon-container"
-                role="button"
-                tabIndex={0}
-                onClick={(e) => handleShowPassword(e, "oldPassword")}
-              >
-                {isPasswordVisilbe.oldPassword ? (
-                  <div className="modifProfil-icon">
-                    <BiShowAlt />
-                  </div>
-                ) : (
-                  <div className="modifProfil-icon">
-                    <BiHide />
-                  </div>
-                )}
-              </div>
             </div>
-            <div className="modifProfil-input-container">
-              <label className="modifProfil-input" htmlFor="passNew">
-                <input
-                  placeholder="nouveau mot de passe"
-                  type={isPasswordVisilbe.newPassword ? "text" : "password"}
-                  name="newPassword"
-                  onChange={handleChange}
-                  id="passNew"
-                />
+
+            <div className="form-group">
+              <input
+                className="form-control"
+                type={isPasswordVisilbe ? "text" : "password"}
+                name="newPassword"
+                onChange={handleChange}
+                id="passNew"
+                required
+              />
+              <label className="form-control-placeholder" htmlFor="passNew">
+                Nouveau mot de passe
               </label>
-              <div
-                className="modifProfil-icon-container"
-                role="button"
-                tabIndex={0}
-                onClick={(e) => handleShowPassword(e, "newPassword")}
-              >
-                {isPasswordVisilbe.newPassword ? (
-                  <div className="modifProfil-icon">
-                    <BiShowAlt />
-                  </div>
-                ) : (
-                  <div className="modifProfil-icon">
-                    <BiHide />
-                  </div>
-                )}
-              </div>
             </div>
-            <div className="modifProfil-input-container">
-              <label className="modifProfil-input" htmlFor="passNewTry">
-                <input
-                  placeholder="confirmer le nouveau mot de passe"
-                  type={
-                    isPasswordVisilbe.newPasswordConfirm ? "text" : "password"
-                  }
-                  name="newPasswordConfirm"
-                  onChange={handleChange}
-                  id="passNewTry"
-                />
+            <div className="form-group">
+              <input
+                className="form-control"
+                type={isPasswordVisilbe ? "text" : "password"}
+                name="newPasswordConfirm"
+                onChange={handleChange}
+                id="passNewTry"
+                required
+              />
+              <label className="form-control-placeholder" htmlFor="passNewTry">
+                Confirmer le nouveau mot de passe
               </label>
-              <div
-                className="modifProfil-icon-container"
-                role="button"
-                tabIndex={0}
-                onClick={(e) => handleShowPassword(e, "newPasswordConfirm")}
-              >
-                {isPasswordVisilbe.newPasswordConfirm ? (
-                  <div className="modifProfil-icon">
-                    <BiShowAlt />
-                  </div>
-                ) : (
-                  <div className="modifProfil-icon">
-                    <BiHide />
-                  </div>
-                )}
-              </div>
             </div>
           </div>
-
+          <div className="modif-profil-show-password-check">
+            <input
+              type="checkbox"
+              id="show-password"
+              onClick={() => handleShow()}
+            />
+            <label htmlFor="show-password">Montrer le mot de passe</label>
+          </div>
           <button
             id="button_preinscription"
             className="button-blue"
@@ -194,7 +162,7 @@ function ModifProfil() {
             onClick={(e) => changeMPD(e)}
             required
           >
-            confirmer mon nouveau mot de passe
+            Valider mon nouveau mot de passe
           </button>
         </form>
       </div>

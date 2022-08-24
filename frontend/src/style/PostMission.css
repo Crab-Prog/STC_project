@@ -3,7 +3,9 @@
   flex-direction: column;
   padding-top: 1rem;
 }
-
+.post-mission-container h1 {
+  padding-bottom: 2rem;
+}
 #post_mission_desc {
   width: 100%;
   height: 30vh;

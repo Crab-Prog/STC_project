@@ -1,79 +1,35 @@
 [
   {
-    "section": "Historique des missions",
-    "link": "/back_office/historique_des_missions",
-    "association": true,
-    "intervenant": true,
-    "administrateur": true
-  },
-  {
-    "section": "Créer une mission",
-    "link": "/back_office/creer_une_mission",
-    "association": true,
-    "intervenant": false,
-    "administrateur": false
-  },
-  {
-    "section": "Missions Disponibles",
-    "link": "/back_office/missions_disponibles",
-    "association": false,
-    "intervenant": true,
-    "administrateur": false
-  },
-  {
     "section": "Liste des utilisateurs",
     "link": "/back_office/liste_des_utilisateurs",
     "association": false,
     "intervenant": false,
-    "administrateur": true
+    "administrateur": true,
+    "icon": "https://img.icons8.com/sf-ultralight/344/edit-user-male.png"
   },
-  {
-    "section": "Missions : Valider une mission",
-    "link": "/back_office/validation_des_missions",
-    "association": false,
-    "intervenant": false,
-    "administrateur": true
-  },
-  {
-    "section": "Missions : Choisir un intervenant",
-    "link": "/back_office/choisir_un_intervenant",
-    "association": false,
-    "intervenant": false,
-    "administrateur": true
-  },
-  {
-    "section": "Missions : Changer l'intervenant",
-    "link": "/back_office/changer_un_intervenant",
-    "association": false,
-    "intervenant": false,
-    "administrateur": true
-  },
-  {
-    "section": "Missions : Terminer une mission",
-    "link": "/back_office/terminer_mission",
-    "association": false,
-    "intervenant": false,
-    "administrateur": true
-  },
+
   {
     "section": "Messages de contact des associations",
     "link": "/back_office/lecture_des_messages",
     "association": false,
     "intervenant": false,
-    "administrateur": true
+    "administrateur": true,
+    "icon": "https://img.icons8.com/sf-ultralight/344/messaging-.png"
   },
   {
     "section": "Mon profil",
     "link": "/back_office/mon_profil",
     "association": true,
     "intervenant": true,
-    "administrateur": true
+    "administrateur": true,
+    "icon": "https://img.icons8.com/sf-ultralight/344/admin-settings-male.png"
   },
   {
     "section": "Déconnexion",
     "link": "",
     "association": true,
     "intervenant": true,
-    "administrateur": true
+    "administrateur": true,
+    "icon": "https://img.icons8.com/sf-ultralight/344/exit.png"
   }
 ]

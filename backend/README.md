@@ -8,8 +8,8 @@ Basé sur une structure MVC, Back-end du projet de Social Team Consulting.
 
 1. Cloner le repo depuis Github.
 2. Effectuer l’installation des packages en lançant la commande `npm install` ou `yarn install`.
-3. Créer un fichier  _.env_ et le remplir en se basant sur le _.env.sample_ avec ses informations personnelles concernant les paramètres de la base.
-Ne pas supprimer le fichier _.sample_ file.
+3. Créer un fichier _.env_ et le remplir en se basant sur le _.env.sample_ avec ses informations personnelles concernant les paramètres de la base.
+   Ne pas supprimer le fichier _.sample_ file.
 
 ```
 DB_HOST=your_db_host
