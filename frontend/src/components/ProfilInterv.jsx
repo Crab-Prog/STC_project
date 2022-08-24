@@ -14,6 +14,7 @@ export default function ProfilInterv() {
   const [imageCV, setImageCV] = useState("");
   const [ImageAuto, setImageAuto] = useState("");
   const [ImageCarteVitale, setImageCarteVitale] = useState("");
+  const [isLoading, setIsloading] = useState(true);
 
   useEffect(() => {
     const ENDPOINT = `/intervenants/bymail/${email}`;
@@ -47,9 +48,16 @@ export default function ProfilInterv() {
           "https://secu-jeunes.fr/wp-content/uploads/2016/09/Carte_Vitale_Une.jpg"
         );
       } else {
-        setImageCV(data[0].data.path);
-        setImageAuto(data[1].data.path);
-        setImageCarteVitale(data[2].data.path);
+        setImageCV(
+          `${import.meta.env.VITE_BACKEND_URL}/uploads/${data[0].data.path}`
+        );
+        setImageAuto(
+          `${import.meta.env.VITE_BACKEND_URL}/uploads/${data[1].data.path}`
+        );
+        setImageCarteVitale(
+          `${import.meta.env.VITE_BACKEND_URL}/uploads/${data[2].data.path}`
+        );
+        setIsloading(!isLoading);
       }
     });
   }, [intervenant]);

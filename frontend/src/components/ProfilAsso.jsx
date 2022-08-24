@@ -42,6 +42,7 @@ export default function ProfilAsso() {
 
   return (
     <div>
+      <ProfilStatusModification user={association} />
       <form
         className="backoffice_profil"
         method="PUT"
@@ -127,7 +128,6 @@ export default function ProfilAsso() {
           </button>
         </div>
       </form>
-      <ProfilStatusModification user={association} />
     </div>
   );
 }
