@@ -98,7 +98,7 @@ nav {
 .navbar-navbarlink-visible,
 .navbar-navbarform-visible,
 .navbar-navbarform-visible-login {
-  width: 21.3rem;
+  width: 23.3rem;
   padding: 1rem 0;
   right: 1rem;
   overflow: hidden;
@@ -336,7 +336,7 @@ nav {
 } */
 
 .navbar-icon {
-  /* filter: invert(1); */
+  filter: invert(1);
   width: 3rem;
 }
 
@@ -404,6 +404,9 @@ nav {
   display: flex;
   align-items: center;
 }
+.navbar-log-icons {
+  width: 2rem;
+}
 
 /* **************************************
 ************** DESKTOP ******************
@@ -443,5 +446,8 @@ nav {
   .navbar-connect-container {
     width: 100%;
     background-color: white;
+  }
+  .navbar-icon {
+    filter: invert(0);
   }
 }

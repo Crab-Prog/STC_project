@@ -34,5 +34,19 @@
     "intervenant": true,
     "administrateur": true,
     "icon": "https://img.icons8.com/sf-ultralight/344/time-machine.png"
+  },
+  {
+    "section": "Créer une mission",
+    "link": "/back_office/creer_une_mission",
+    "association": true,
+    "intervenant": false,
+    "administrateur": false
+  },
+  {
+    "section": "Missions Disponibles",
+    "link": "/back_office/missions_disponibles",
+    "association": false,
+    "intervenant": true,
+    "administrateur": false
   }
 ]

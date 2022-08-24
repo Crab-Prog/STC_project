@@ -14,7 +14,7 @@ import ExportContext from "../contexts/Context";
 
 import "@style/BackOffice.css";
 import "@style/NavBar.css";
-import Navtest from "./Navtest";
+import NavDropDownMenu from "./NavDropDownMenu";
 
 function NavBarBackOffice() {
   const { infoUser, setInfoUser } = useContext(ExportContext.Context);
@@ -85,53 +85,71 @@ function NavBarBackOffice() {
         </div>
         <div className="nav-part-two">
           <ul className="navbar-list">
-            <Navtest />
             {infoUser.etat === "pré-inscrit" &&
             infoUser.role !== "administrateur" ? (
-              <NavLink to="/back_office/mon_profil">
-                <li
-                  className="navbar-li_highlight"
-                  onClick={() => Deconnexion(navigate, setInfoUser)}
-                >
-                  {/* <img src="https://www.svgrepo.com/show/347992/user.svg" alt="" className="navbar-icon"/> */}
-                  <h2>Déconnexion</h2>
-                </li>
-              </NavLink>
+              <>
+                <NavLink to="/back_office/mon_profil">
+                  <li className="navbar-li_highlight">
+                    <img
+                      src="https://img.icons8.com/sf-ultralight/344/admin-settings-male.png"
+                      alt=""
+                      className="navbar-links-icons"
+                    />
+                    <h2>Profil</h2>
+                  </li>
+                </NavLink>
+                <NavLink to="/back_office/mon_profil">
+                  <li
+                    className="navbar-li_highlight"
+                    onClick={() => Deconnexion(navigate, setInfoUser)}
+                  >
+                    <img
+                      src="https://img.icons8.com/sf-ultralight/344/exit.png"
+                      alt=""
+                      className="navbar-links-icons"
+                    />
+                    <h2>Deco</h2>
+                  </li>
+                </NavLink>
+              </>
             ) : (
-              DataLinks.filter((r) => r[infoUser.role]).map((el) => {
-                if (el.section === "Déconnexion") {
-                  return (
-                    <div role="button" tabIndex={0} className="navbar-button">
-                      <li
-                        className="navbar-li_highlight"
-                        onClick={() => Deconnexion(navigate, setInfoUser)}
-                      >
-                        <img
-                          src={`${el.icon}`}
-                          alt=""
-                          className="navbar-links-icons"
-                        />
-                        <h2>{el.section}</h2>
-                      </li>
-                    </div>
-                  );
-                }
+              <>
+                <NavDropDownMenu />
+                {DataLinks.filter((r) => r[infoUser.role]).map((el) => {
+                  if (el.section === "Déconnexion") {
+                    return (
+                      <div role="button" tabIndex={0} className="navbar-button">
+                        <li
+                          className="navbar-li_highlight"
+                          onClick={() => Deconnexion(navigate, setInfoUser)}
+                        >
+                          <img
+                            src={`${el.icon}`}
+                            alt=""
+                            className="navbar-links-icons"
+                          />
+                          <h2>{el.section}</h2>
+                        </li>
+                      </div>
+                    );
+                  }
 
-                return (
-                  <NavLink to={el.link}>
-                    <div role="button" tabIndex={0} className="navbar-button">
-                      <li className="navbar-li_highlight">
-                        <img
-                          src={`${el.icon}`}
-                          alt=""
-                          className="navbar-links-icons"
-                        />
-                        <h2>{el.section}</h2>
-                      </li>
-                    </div>
-                  </NavLink>
-                );
-              })
+                  return (
+                    <NavLink to={el.link}>
+                      <div role="button" tabIndex={0} className="navbar-button">
+                        <li className="navbar-li_highlight">
+                          <img
+                            src={`${el.icon}`}
+                            alt=""
+                            className="navbar-links-icons"
+                          />
+                          <h2>{el.section}</h2>
+                        </li>
+                      </div>
+                    </NavLink>
+                  );
+                })}
+              </>
             )}
           </ul>
         </div>
@@ -164,7 +182,7 @@ function NavBarBackOffice() {
 
             <div className="navbar-menu_wrapper">
               <hr className="navbar-hr" />
-              <Navtest />
+              <NavDropDownMenu />
               <NavBarBackOfficeLinks
                 handleisMenuVisible={handleisMenuVisible}
                 handleDeconnexion={() => Deconnexion(navigate, setInfoUser)}

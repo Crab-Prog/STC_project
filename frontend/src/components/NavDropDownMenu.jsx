@@ -5,9 +5,10 @@ import { NavLink } from "react-router-dom";
 import MissionsData from "@services/linksMissions.json";
 import ExportContext from "../contexts/Context";
 
-function Navtest() {
-  const { isVisible, setIsVisible } = useContext(ExportContext.Context);
-
+function NavDropDownMenu() {
+  const { isVisible, setIsVisible, infoUser } = useContext(
+    ExportContext.Context
+  );
   return (
     <li>
       <details className="back-office-nav-drop-menu">
@@ -20,7 +21,7 @@ function Navtest() {
         </summary>
         {isVisible ? (
           <div className="back-office-nav-container">
-            {MissionsData.map((e) => {
+            {MissionsData.filter((r) => r[infoUser.role]).map((e) => {
               return (
                 <NavLink to={e.link}>
                   <div
@@ -42,4 +43,4 @@ function Navtest() {
   );
 }
 
-export default Navtest;
+export default NavDropDownMenu;

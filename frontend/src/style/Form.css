@@ -36,12 +36,12 @@
 .register_asso input[type="password"],
 .register_asso input[type="email"],
 .register_asso textarea,
-/* .app-backoffice-container input[type="text"],
+.app-backoffice-container input[type="text"],
 .app-backoffice-container input[type="date"],
 .app-backoffice-container input[type="time"],
 .app-backoffice-container input[type="email"],
 .app-backoffice-container input[type="number"],
-.app-backoffice-container textarea[type="text"], */
+.app-backoffice-container textarea[type="text"],
 #job_select,
 .modifProfil-card-container input[type="password"],
 .modifProfil-card-container input[type="text"] {

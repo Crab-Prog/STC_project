@@ -86,14 +86,7 @@ li {
   cursor: pointer;
   transition: all 0.25s ease;
   color: var(--color-black);
-}
-
-.button-blue:hover {
-  background-color: var(--color-interaction);
-}
-
-.button-orange:hover {
-  background-color: var(--color-interaction);
+  background-color: #19a8b36e;
 }
 
 @media (min-width: 600px) {
