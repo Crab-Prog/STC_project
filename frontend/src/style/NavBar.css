@@ -74,7 +74,11 @@ nav {
   /* background-color: var(--color-highlight); */
   border-radius: 0.6rem 0.6rem 0 0;
 }
-
+.navbar-list-landing li:hover,
+.navbar-button:hover {
+  background-color: #cacaca36;
+  transition: 0.4s;
+}
 .navbar-links-icons {
   width: 4.5rem;
   filter: invert(1);
@@ -99,13 +103,13 @@ nav {
 .navbar-navbarform-visible,
 .navbar-navbarform-visible-login {
   width: 23.3rem;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   right: 1rem;
   overflow: hidden;
 }
 
 .navbar-navbarlink-visible {
-  animation: 1s fadeinlink ease-in;
+  animation: 0.5s fadeinlink ease-in;
   margin-top: 0.5rem;
   filter: drop-shadow(0 3px 0.2rem rgb(0 0 0 / 45%));
 }
@@ -123,7 +127,7 @@ nav {
 
 .navbar-navbarform-visible {
   /* height: 16rem; */
-  animation: 1s fadeinform ease-in;
+  animation: 0.5s fadeinform ease-in;
   filter: drop-shadow(0 3px 0.2rem rgb(0 0 0 / 45%));
   margin-top: 0.5rem;
 }
@@ -217,7 +221,7 @@ nav {
   height: 0.2rem;
   position: relative;
   background-color: var(--color-interaction);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .navbar-bar::before,
