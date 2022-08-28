@@ -91,6 +91,6 @@ li {
 
 @media (min-width: 600px) {
   .app-main-container {
-    width: clamp(375px, 70%, 1200px);
+    width: clamp(375px, 90%, 1200px);
   }
 }

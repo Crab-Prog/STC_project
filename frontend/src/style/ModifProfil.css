@@ -42,12 +42,6 @@
   gap: 0.6rem;
 }
 
-/* .modifProfil-input input[type="text"],
-.modifProfil-input input[type="password"] {
-  padding: 0 0.2rem;
-  width: 100%;
-} */
-
 .modifProfil-icon-container {
   display: flex;
   align-items: center;
@@ -55,10 +49,4 @@
 
 .modifProfil-icon {
   line-height: 1px;
-}
-
-@media screen and (min-width: 1200px) {
-  .modifProfil-card-container {
-    width: 80%;
-  }
 }

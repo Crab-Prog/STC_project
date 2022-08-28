@@ -1,5 +1,4 @@
 .synthesis {
-  width: 25rem;
   margin: 1rem auto;
   overflow: hidden;
   border-radius: 1em;
@@ -95,4 +94,10 @@
 .synthesis-finish_area {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (min-width: 1250px) {
+  .synthesis {
+    width: 25rem;
+  }
 }

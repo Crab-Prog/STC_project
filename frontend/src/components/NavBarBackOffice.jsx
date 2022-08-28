@@ -43,25 +43,6 @@ function NavBarBackOffice() {
   return (
     <>
       <div className="navbar-desktop-backoffice">
-        {/* <div className="nav-part-one">
-          <div className="navbar-desk-logo">
-            <img
-              className="navbar-logo"
-              src={logo}
-              alt="logo de la Social Team Consulting"
-              onClick={() => navigate("/")}
-            />
-            <h1>Social Team Consulting</h1>
-          </div>
-          <div className="navbar-desk-img-profile">
-            <img src={genericavatar} alt="profile" />
-          </div>
-          <div className="navbar-desk-name">
-            <h1>
-              {names.prenom} {names.nom}
-            </h1>
-          </div>
-        </div> */}
         <div className="nav-part-one">
           <div className="navbar-desk-logo">
             <img
@@ -108,7 +89,7 @@ function NavBarBackOffice() {
                       alt=""
                       className="navbar-links-icons"
                     />
-                    <h2>Deco</h2>
+                    <h2>Déconnexion</h2>
                   </li>
                 </NavLink>
               </>
@@ -182,7 +163,7 @@ function NavBarBackOffice() {
 
             <div className="navbar-menu_wrapper">
               <hr className="navbar-hr" />
-              <NavDropDownMenu />
+              <NavDropDownMenu handleisMenuVisible={handleisMenuVisible} />
               <NavBarBackOfficeLinks
                 handleisMenuVisible={handleisMenuVisible}
                 handleDeconnexion={() => Deconnexion(navigate, setInfoUser)}

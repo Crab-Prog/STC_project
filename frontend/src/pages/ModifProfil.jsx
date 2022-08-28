@@ -37,21 +37,8 @@ function ModifProfil() {
       });
   }, [user]);
 
-  // const [isPasswordVisilbe, setIsPasswordVisilbe] = useState({
-  //   oldPassword: false,
-  //   newPassword: false,
-  //   newPasswordConfirm: false,
-  // });
   const [isPasswordVisilbe, setIsPasswordVisilbe] = useState(false);
   const [newPass, setNewPass] = useState();
-
-  // const handleShowPassword = (e, inputChoice) => {
-  //   e.preventDefault();
-  //   setIsPasswordVisilbe({
-  //     ...isPasswordVisilbe,
-  //     [inputChoice]: !isPasswordVisilbe[inputChoice],
-  //   });
-  // };
 
   function handleChange(e) {
     setNewPass({
