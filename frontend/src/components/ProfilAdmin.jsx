@@ -48,48 +48,48 @@ export default function ProfilAdmin() {
       <div>
         <div className="profil-form-box">
           <label htmlFor="name" className="backoffice-input-half">
-            {administrateur.nom}
+            Nom
             <input
               className="rules"
               type="text"
               name="nom"
-              placeholder="Tapez un nouveau nom"
+              placeholder={`${administrateur.nom}`}
               onChange={(e) => handleChange(e)}
             />
           </label>
         </div>
         <div className="profil-form-box">
           <label htmlFor="firstname" className="backoffice-input-half">
-            {administrateur.prenom}
+            Prénom
             <input
               className="rules"
               type="text"
               name="prenom"
-              placeholder="Tapez un nouveau prenom"
+              placeholder={`${administrateur.prenom}`}
               onChange={(e) => handleChange(e)}
             />
           </label>
         </div>
         <div className="profil-form-box">
           <label htmlFor="mail" className="backoffice-input-half">
-            {administrateur.email}
+            Email
             <input
               className="rules"
               type="text"
               name="email"
-              placeholder="Tapez un nouveau email"
+              placeholder={`${administrateur.email}`}
               onChange={(e) => handleChange(e)}
             />
           </label>
         </div>
         <div className="profil-form-box">
           <label htmlFor="phone" className="backoffice-input-half">
-            {administrateur.telephone}
+            Téléphone
             <input
               className="rules"
               type="text"
               name="telephone"
-              placeholder="Tapez un nouveau téléphone"
+              placeholder={`${administrateur.telephone}`}
               onChange={(e) => handleChange(e)}
             />
           </label>

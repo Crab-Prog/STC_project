@@ -66,7 +66,7 @@ nav {
   border-radius: 0.6rem 0.6rem 0 0;
 }
 .navbar-list-landing li:hover,
-.navbar-button:hover {
+.desktop-back:hover {
   background-color: #cacaca36;
   transition: 0.4s;
 }
@@ -329,6 +329,9 @@ nav {
 
 .back-office-nav-links {
   color: var(--color-grey);
+}
+.back-office-nav-links:hover {
+  color: var(--color-interaction);
 }
 .navbar-button li {
   width: 100%;

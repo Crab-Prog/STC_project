@@ -8,7 +8,7 @@ function NavBarLinks({ handleisMenuVisible, showLink }) {
         <div
           role="button"
           tabIndex={0}
-          className="navbar-button"
+          className="navbar-button desktop-back"
           onClick={() => {
             handleisMenuVisible(false);
             showLink(false);
@@ -27,7 +27,7 @@ function NavBarLinks({ handleisMenuVisible, showLink }) {
         <div
           role="button"
           tabIndex={0}
-          className="navbar-button"
+          className="navbar-button desktop-back"
           onClick={() => {
             handleisMenuVisible(false);
             showLink(false);
