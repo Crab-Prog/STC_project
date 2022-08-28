@@ -156,7 +156,7 @@ function PostMission() {
             <div className="backoffice-bloc">
               <div className="form-group">
                 <label htmlFor="post_mission_horaire_debut" className="">
-                  <p>Horaires debut</p>{" "}
+                  <p>Horaires début</p>{" "}
                 </label>
                 <input
                   type="time"

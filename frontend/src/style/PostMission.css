@@ -3,6 +3,10 @@
   flex-direction: column;
   padding-top: 1rem;
 }
+.post-mission-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
 .post-mission-container h1 {
   padding-bottom: 2rem;
 }

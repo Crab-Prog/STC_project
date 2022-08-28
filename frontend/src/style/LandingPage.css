@@ -24,7 +24,7 @@ header h1 {
 #services {
   background-color: var(--color-interaction);
   margin: 1rem 0rem;
-  padding: 0.5rem;
+  padding: 1.5rem;
   border-radius: 0.63rem;
 }
 
@@ -56,6 +56,7 @@ div > section > h1:nth-child(2n + 1) {
   display: flex;
   align-items: center;
   flex-direction: row;
+  justify-content: center;
 }
 
 .list li {
@@ -89,7 +90,4 @@ div > section > h1:nth-child(2n + 1) {
   .img5 {
     display: none;
   }
-}
-
-@media screen and (min-width: 845px) {
 }

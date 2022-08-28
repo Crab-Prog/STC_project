@@ -15,25 +15,23 @@ function LandingPage() {
       <section id="services">
         <h1>Nos services</h1>
         <div className="section-inner-content">
-          <div>
-            <div className="argumentaire">
-              <ul className="list">
-                <li>
-                  Une équipe <span>spécialisée</span> au service du secteur{" "}
-                  <span>social</span> et <span>médico-social</span> .
-                </li>
-                <li>
-                  Une <span>mise en relation</span> avec des intervenants aux{" "}
-                  <span>compétences variées</span> : accueillante, technicien•ne
-                  d’intervention sociale et familiale, éducation spécialisée,
-                  moniteur éducateur, CESF, Assistante de Service Sociale,
-                  animateur…
-                </li>
-                <li>
-                  Intervention dans <span>toute l’Île-de-France</span>
-                </li>
-              </ul>
-            </div>
+          <div className="argumentaire">
+            <ul className="list">
+              <li>
+                Une équipe <span>spécialisée</span> au service du secteur{" "}
+                <span>social</span> et <span>médico-social</span> .
+              </li>
+              <li>
+                Une <span>mise en relation</span> avec des intervenants aux{" "}
+                <span>compétences variées</span> : accueillante, technicien•ne
+                d’intervention sociale et familiale, éducation spécialisée,
+                moniteur éducateur, CESF, Assistante de Service Sociale,
+                animateur…
+              </li>
+              <li>
+                Intervention dans <span>toute l’Île-de-France</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

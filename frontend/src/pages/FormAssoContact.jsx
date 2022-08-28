@@ -54,10 +54,9 @@ function FormAssoContact() {
               Vous êtes une association et vous <br />
               souhaitez nous contacter ?
             </h1>
-            <h1>Nous vous invitons à remplir ce formulaire</h1>
-            <div>
-              <label htmlFor="asso_name">
-                <p>Nom de votre association</p>
+            <h2>Nous vous invitons à remplir ce formulaire</h2>
+            <div className="form-inter-container middle-box">
+              <div className="form-group">
                 <input
                   type="text"
                   id="asso_name"
@@ -65,12 +64,14 @@ function FormAssoContact() {
                   required
                   value={messageValue.nom}
                   onChange={handleChangeMessage}
+                  className="form-control"
                 />
-              </label>
-            </div>
-            <div>
-              <label htmlFor="asso_email">
-                <p>Email</p>
+                <label htmlFor="asso_name" className="form-control-placeholder">
+                  <p>Nom de votre association</p>{" "}
+                </label>
+              </div>
+
+              <div className="form-group">
                 <input
                   type="email"
                   name="email"
@@ -78,12 +79,17 @@ function FormAssoContact() {
                   id="asso_email"
                   value={messageValue.email}
                   onChange={handleChangeMessage}
+                  className="form-control"
                 />
-              </label>
-            </div>
-            <div>
-              <label htmlFor="asso_tel">
-                <p>Téléphone</p>
+                <label
+                  htmlFor="asso_email"
+                  className="form-control-placeholder"
+                >
+                  <p>Email</p>
+                </label>
+              </div>
+
+              <div className="form-group">
                 <input
                   type="text"
                   id="asso_tel"
@@ -91,24 +97,33 @@ function FormAssoContact() {
                   required
                   value={messageValue.telephone}
                   onChange={handleChangeMessage}
+                  className="form-control"
                 />
-              </label>
-            </div>
-            <div className="form_textarea">
-              <label htmlFor="message">
-                <p>Votre message</p>
+                <label htmlFor="asso_tel" className="form-control-placeholder">
+                  <p>Téléphone</p>{" "}
+                </label>
+              </div>
 
+              <div className="form-group">
                 <textarea
                   id="message"
                   name="message"
                   required
                   value={messageValue.message}
                   onChange={handleChangeMessage}
+                  className="form-control"
                 />
-              </label>
-            </div>
-            <div className="submit_button">
-              <input type="submit" className="button-blue" value={buttonText} />
+                <label htmlFor="message" className="form-control-placeholder">
+                  <p>Votre message</p>
+                </label>
+              </div>
+              <div className="submit_button">
+                <input
+                  type="submit"
+                  className="button-blue"
+                  value={buttonText}
+                />
+              </div>
             </div>
           </div>
         </form>

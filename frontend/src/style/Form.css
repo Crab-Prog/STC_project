@@ -5,10 +5,9 @@
 .register_form {
   display: flex;
   flex-direction: column;
-  width: 90%;
   margin: 0.625rem auto;
   max-width: 900px;
-  gap: 0.625rem;
+  gap: 1rem;
 }
 
 .register label,
@@ -44,7 +43,9 @@
 .app-backoffice-container textarea[type="text"],
 #job_select,
 .modifProfil-card-container input[type="password"],
-.modifProfil-card-container input[type="text"] {
+.modifProfil-card-container input[type="text"],
+.navbar-form_members input[type="email"],
+.navbar-form_members input[type="password"] {
   display: block;
   width: 100%;
   padding: 0.5rem 0.75rem;
@@ -102,10 +103,6 @@
   height: 11.25rem;
 }
 
-/* .back {
-  padding-bottom: 5rem;
-} */
-
 .register input[type="submit"],
 .register_asso input[type="submit"] {
   margin: auto;
@@ -118,10 +115,6 @@
   color: var(--color-black);
 }
 
-.form_upload {
-  background-color: white;
-}
-
 .upload_icon {
   color: var(--color-highlight);
   font-size: 3.125rem;
@@ -130,7 +123,9 @@
 #upload_files {
   visibility: "hidden";
 }
-
+.form_upload {
+  margin: 2rem 0rem;
+}
 .form_upload label {
   cursor: pointer;
   border-radius: 0.6rem;
@@ -161,12 +156,14 @@
 }
 .form-inter-box-files {
   border-bottom: 0.3rem solid #f0f2f5;
+  background-color: white;
 }
 
 @media screen and (min-width: 768px) {
   .box_form {
     display: flex;
     justify-content: space-around;
+    gap: 1rem;
   }
 
   .register input[type="text"],
@@ -183,6 +180,15 @@
   .register_asso input[type="email"] {
     width: 100%;
   }
+  .form-inter-container {
+    margin: 0 auto;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .middle-box {
+    width: 70%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -194,23 +200,7 @@
   }
 
   .register_asso .register_form {
-    border-color: var(--color-line-asso);
-  }
-
-  .register textarea,
-  .register_asso textarea {
-    resize: none;
-    height: 11.25rem;
-    width: 86%;
-  }
-
-  .register_asso input[type="text"],
-  .register_asso input[type="email"] {
-    width: 86%;
-  }
-
-  .form_upload {
-    padding: 2rem 0 2rem;
+    border-color: var(--color-interaction);
   }
 
   .submit_button {

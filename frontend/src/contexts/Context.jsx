@@ -10,6 +10,7 @@ function Provider({ children }) {
   });
 
   const [isVisible, setIsVisible] = useState(false);
+
   return (
     <Context.Provider
       value={{
