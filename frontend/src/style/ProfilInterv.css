@@ -1,5 +1,8 @@
 .backoffice_profil {
   background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .backoffice-bloc {
@@ -49,6 +52,8 @@ h1.bold {
   width: 100%;
   padding: 2rem 0;
   height: auto;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .profilInter-container {
@@ -77,6 +82,7 @@ h1.bold {
   flex-direction: column;
   gap: 2rem;
   margin: 0 auto;
+  max-width: 600px;
 }
 
 .profil-form-box {

@@ -108,7 +108,7 @@ function NavBarBackOffice() {
                       alt=""
                       className="navbar-links-icons"
                     />
-                    <h2>Deco</h2>
+                    <h2>Déconnexion</h2>
                   </li>
                 </NavLink>
               </>
@@ -182,7 +182,7 @@ function NavBarBackOffice() {
 
             <div className="navbar-menu_wrapper">
               <hr className="navbar-hr" />
-              <NavDropDownMenu />
+              <NavDropDownMenu handleisMenuVisible={handleisMenuVisible} />
               <NavBarBackOfficeLinks
                 handleisMenuVisible={handleisMenuVisible}
                 handleDeconnexion={() => Deconnexion(navigate, setInfoUser)}
