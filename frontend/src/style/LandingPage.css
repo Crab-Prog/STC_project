@@ -91,6 +91,3 @@ div > section > h1:nth-child(2n + 1) {
     display: none;
   }
 }
-
-@media screen and (min-width: 845px) {
-}

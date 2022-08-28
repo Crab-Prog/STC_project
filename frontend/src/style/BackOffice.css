@@ -117,18 +117,6 @@
     height: 8rem;
   }
 
-  /* .navbar-desk-img-profile {
-    height: 10rem;
-    padding-bottom: 0;
-  } */
-
-  /* .navbar-desk-img-profile,
-  .navbar-desk-name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-highlight);
-  } */
   .navbar-desk-avatar-container {
     display: flex;
     justify-content: center;
@@ -180,8 +168,6 @@
 
   .nav-part-two {
     background-color: var(--color-highlight);
-    /* border-radius: 0px 0px 20px 20px;
-    padding: 2rem 0; */
     height: 100%;
   }
 }

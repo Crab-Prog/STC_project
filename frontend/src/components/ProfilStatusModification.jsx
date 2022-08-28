@@ -104,7 +104,6 @@ function ProfilStatusModification({ user }) {
 
   return (
     <>
-      {/* <hr className="profilinter-hr" /> */}
       <h1 className="bold">Status de l'utilisateur: {`${etat}.`}</h1>
       <div className="profilinter-button">{modifEtat()}</div>
       <hr className="profilinter-hr" />

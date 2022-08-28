@@ -43,25 +43,6 @@ function NavBarBackOffice() {
   return (
     <>
       <div className="navbar-desktop-backoffice">
-        {/* <div className="nav-part-one">
-          <div className="navbar-desk-logo">
-            <img
-              className="navbar-logo"
-              src={logo}
-              alt="logo de la Social Team Consulting"
-              onClick={() => navigate("/")}
-            />
-            <h1>Social Team Consulting</h1>
-          </div>
-          <div className="navbar-desk-img-profile">
-            <img src={genericavatar} alt="profile" />
-          </div>
-          <div className="navbar-desk-name">
-            <h1>
-              {names.prenom} {names.nom}
-            </h1>
-          </div>
-        </div> */}
         <div className="nav-part-one">
           <div className="navbar-desk-logo">
             <img
