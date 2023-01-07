@@ -61,7 +61,7 @@ function BackOfficeAdminInterValidation() {
                         value={intervenant.email}
                         onChange={() => handleChange(intervenant)}
                       />
-                      {`${intervenant.nom} ${intervenant.prenom} `}
+                      {` ${intervenant.nom} ${intervenant.prenom} `}
                     </label>
                   </div>
                 );

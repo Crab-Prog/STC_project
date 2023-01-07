@@ -36,7 +36,7 @@ function LandingPage() {
         </div>
       </section>
       <section>
-        <h1>Un accompagnement de qualité</h1>
+        <h2>Un accompagnement de qualité</h2>
         <div className="regular-section" id="even_section">
           <img
             src={img3}
@@ -54,7 +54,7 @@ function LandingPage() {
         </div>
       </section>
       <section>
-        <h1> L'humain, plus qu'une priorité </h1>
+        <h2> L'humain, plus qu'une priorité </h2>
         <div className="regular-section">
           <img
             src={img1}
@@ -75,7 +75,7 @@ function LandingPage() {
         </div>
       </section>
       <section>
-        <h1>Qui sommes nous ?</h1>
+        <h2>Qui sommes nous ?</h2>
         <div className="regular-section" id="even_section">
           <img src={img2} alt="Qui sommes nous" className="img2 img" />
           <p>

@@ -68,7 +68,7 @@ li {
   text-align: center;
   font-weight: 500;
   background-color: var(--color-button);
-  box-shadow: 2px 7px 60px -2px rgba(126, 126, 126, 0.8);
+  box-shadow: 2px 7px 60px -2px rgba(150, 149, 149, 0.8);
 }
 
 .button-blue {
