@@ -6,11 +6,14 @@
   content: "";
   display: inline-block;
   width: 1rem;
-  height: 1rem;
+  height: 1rem;  
+  position: absolute;
+  left: 5px;
 }
 
 .pré-inscrit::before {
   background-color: var(--color-highlight);
+
 }
 
 .inscrit::before {
@@ -58,20 +61,31 @@ details[open] div {
   margin-bottom: 2rem;
   font-family: var(--font-title);
 }
-
-.user-list p {
-  padding: 0.5rem;
+.user-list div {
   background-color: white;
   border-bottom: 0.3rem solid #f0f2f5;
+
+}
+.user-list p {
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  width: 40%;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
+  justify-content: flex-start;
 }
 
 p.pré-inscrit,
 p.inscrit,
 p.banni,
 p.refusé,
-p.admin:hover {
+p.admin {
   cursor: pointer;
+  position: relative;
+}
+
+p.pré-inscrit:hover,
+p.inscrit:hover,
+p.banni:hover,
+p.refusé:hover,
+p.admin:hover {
+  color: var(--color-interaction);
 }

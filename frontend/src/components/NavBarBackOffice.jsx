@@ -1,19 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import logo from "@assets/logo-STC.png";
-import { NavLink, useNavigate } from "react-router-dom";
 import { Deconnexion, api } from "@services/services";
-
 import NavBarBackOfficeLinks from "@components/NavBarBackOfficeLinks";
-
+import picture from "@assets/generic-picture.webp";
 // import genericavatar from "@assets/genericavatar.png";
-
 import DataLinks from "@services/links.json";
-
-import ExportContext from "../contexts/Context";
-
 import "@style/BackOffice.css";
 import "@style/NavBar.css";
+import ExportContext from "../contexts/Context";
 import NavDropDownMenu from "./NavDropDownMenu";
 
 function NavBarBackOffice() {
@@ -175,11 +171,7 @@ function NavBarBackOffice() {
             <hr className="navbar-bottom-hr" />
             <div className="profile-desc">
               <div className="profile-desc-picture">
-                <img
-                  className="avatarprofilimg"
-                  src="https://images.pexels.com/photos/796602/pexels-photo-796602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="profile"
-                />
+                <img className="avatarprofilimg" src={picture} alt="profile" />
               </div>
               <div className="profile-desc-name">
                 <h2>
