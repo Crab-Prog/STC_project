@@ -4,7 +4,7 @@ function mapMessages(message, handleOnclick, closed) {
   return (
     <div className="lecture-message">
       <div className="lecture-message-container">
-        <h3 className="lecture-message-titre">{`${message.nom} ${message.prenom}`}</h3>
+        <h3 className="lecture-message-titre">{`${message.nom}`}</h3>
         <p className="lecture-message-text">{message.message}</p>
         <p className="lecture-message-repondre">
           Répondre à :{" "}
@@ -13,7 +13,8 @@ function mapMessages(message, handleOnclick, closed) {
           </a>
         </p>
         <p className="lecture-message-repondre">
-          Téléphone : {message.telephone}
+          Téléphone :{" "}
+          <a href={`tel:+33${message.telephone}`}>{message.telephone}</a>
         </p>
         {!closed ? (
           <button

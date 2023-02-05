@@ -24,6 +24,7 @@ import BackOfficeMissionsDisponibles from "@components/BackOfficeMissionsDisponi
 import BackOfficeAdminMissionTerminee from "@components/BackOfficeAdminMissionTerminee";
 import BackOfficeLectureMessage from "@components/BackOfficeLectureMessage";
 import BackOfficeListeUsers from "@components/BackOfficeListeUsers";
+import NotFound from "@components/NotFound";
 
 import PrivateRoute from "@services/PrivateRoute";
 
@@ -194,6 +195,7 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route path="*" element={<NotFound />} />
         </Route>
 
         <Route path="/" element={<Home />}>
@@ -206,6 +208,7 @@ function App() {
           />
           <Route path="accueil_intervenant" element={<AccueilIntervenant />} />
           <Route path="formulaire_intervenant" element={<FormInterv />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
       <ToastContainer

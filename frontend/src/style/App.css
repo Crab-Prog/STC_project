@@ -1,19 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 :root {
   --color-grey: #f0f2f5;
   --color-black: #050505;
   --color-highlight: rgb(38, 38, 38);
-
   --color-interaction: #19a8b3;
   --color-button: #19a8b3;
   --color-line-asso: #8dc73b;
-  --color-line-inter: #222222;
+  --color-line-inter: #f79a33;
   --color-line-admin: #7f4197;
   --font-title: "Merriweather", serif;
   --font-paragraph: "Roboto", sans-serif;
@@ -37,6 +33,7 @@ a {
 body {
   background-color: var(--color-grey);
   letter-spacing: 0.03rem;
+  line-height: 1.5rem;
 }
 
 h1 {
@@ -44,6 +41,7 @@ h1 {
   font-weight: 700;
   font-size: var(--font-size-title);
   padding: 0.5rem 0;
+  line-height: 1.5;
 }
 
 h2 {
@@ -60,33 +58,38 @@ li {
   padding: 3.5rem 1rem 0 1rem;
 }
 
-.button-blue,
-.button-orange {
+.button-blue {
   padding: 0.4rem 1rem;
   border-radius: 0.2rem;
-  border: 0.125rem solid;
+  border: 0.125rem solid var(--color-button);
   text-align: center;
   font-weight: 500;
   background-color: var(--color-button);
   box-shadow: 2px 7px 60px -2px rgba(150, 149, 149, 0.8);
 }
-
-.button-blue {
-  border-color: var(--color-button);
-  color: var(--color-grey);
-}
-
 .button-orange {
-  color: var(--color-interaction);
-  border-color: var(--color-interaction);
+  padding: 0.4rem 1rem;
+  border-radius: 0.2rem;
+  border: 0.125rem solid var(--color-line-inter);
+  text-align: center;
+  font-weight: 500;
+  background-color: var(--color-line-inter);
+  box-shadow: 2px 7px 60px -2px rgba(150, 149, 149, 0.8);
 }
-
-.button-blue:hover,
 .button-orange:hover {
   cursor: pointer;
   transition: all 0.25s ease;
-  color: var(--color-black);
-  background-color: #19a8b36e;
+  color: var(--color-grey);
+  background-color: #e0851e;
+  border: 0.125rem solid #e0851e;
+}
+
+.button-blue:hover {
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: var(--color-grey);
+  background-color: #177177;
+  border: 0.125rem solid #177177;
 }
 
 @media (min-width: 600px) {

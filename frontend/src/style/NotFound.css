@@ -1,0 +1,16 @@
+.not-found-link-container {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10;
+  margin: 1rem 0px 3rem 0px;
+}
+
+.not-found-link {
+  text-decoration: none;
+  color: var(--color-highlight);
+}
+
+.not-found-link:hover {
+  font-weight: 500;
+}
